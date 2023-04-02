@@ -2,7 +2,7 @@
 Weather App
 
    splash_screen
-![Alt text](C:/Screenshot_2023-04-02-12-20-29-612_com.example.weather_app.jpg)
+(C:/Screenshot_2023-04-02-12-20-29-612_com.example.weather_app.jpg)
 -> Header Text
 -> Background Frame
 -> Bcakgroud Color Gradint
@@ -13,7 +13,7 @@ Weather App
 
 
   home_Screen
-  ![Alt text](C:/Screenshot_2023-04-02-11-53-20-531_com.example.weather_app.jpg)
+  (C:/Screenshot_2023-04-02-11-53-20-531_com.example.weather_app.jpg)
 
 -> Have Button For Go To Home 
 -> AppBar Have A Date
