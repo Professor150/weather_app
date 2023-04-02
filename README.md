@@ -1,16 +1,20 @@
-# weather_app
 
-A new Flutter project.
+Weather App
 
-## Getting Started
+   splash_screen
+![Alt text](C:/Screenshot_2023-04-02-12-20-29-612_com.example.weather_app.jpg)
+-> Header Text
+-> Background Frame
+-> Bcakgroud Color Gradint
+-> Have Button For Skip And Go To The Next Page
+-> Impliment Timer for After 5 senconds go Automaticaly Homepage
+-> Use for screen Animation SpinKit 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  home_Screen
+  ![Alt text](C:/Screenshot_2023-04-02-11-53-20-531_com.example.weather_app.jpg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-> Have Button For Go To Home 
+-> AppBar Have A Date
+-> Have TextField for search  ..... But i cannot implement for serach

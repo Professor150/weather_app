@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:argon_buttons_flutter_fix/argon_buttons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:weather_app/model/images.dart';
 import 'package:weather_app/screen/homescreen.dart';
 import 'package:intl/intl.dart';
@@ -15,18 +16,21 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  // time for 5 send to go automatically in homeScreen
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => HomeScreen(),
-        ),
-      );
+
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => HomeScreen()));
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
   }
 
   @override
@@ -35,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(30),
+          padding: const EdgeInsets.all(30),
           constraints: BoxConstraints.expand(),
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -69,8 +73,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
               // center image  splash Screen
 
-              Image(
-                height: 400,
+              const Image(
+                height: 350,
                 width: double.infinity,
                 image: AssetImage('assets/images/icon.png'),
                 fit: BoxFit.contain,
@@ -86,12 +90,12 @@ class _SplashScreenState extends State<SplashScreen> {
                     fontWeight: FontWeight.w500,
                     letterSpacing: 0.6),
               ),
-              SizedBox(
-                height: 70,
+              const SizedBox(
+                height: 90,
               ),
-              SpinKitWave(
+              const SpinKitWave(
                 // duration: Duration(seconds: 4),
-                size: 60,
+                size: 80,
                 color: Colors.blue,
               ),
               Align(
@@ -110,7 +114,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       color: Colors.amberAccent,
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Skip  >',
                       style: TextStyle(
                           color: Colors.blue,
@@ -120,14 +124,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
               ),
-              Row(
-                children: List.generate(3, (index) {
-                  var iconList = [cloud, humidity, weather];
-                  return Column(
-                    children: [],
-                  );
-                }),
-              )
             ],
           ),
         ),
